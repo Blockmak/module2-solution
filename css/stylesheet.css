@@ -6,21 +6,29 @@
 
 h1 {
   text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
 }
 
 section {
+  padding: 6px 24px 6px 30px;
+}
+
+section div {
   background-color: gray;
   border: 2px solid black;
   overflow: hidden;
+  position: relative;  
 }
 
 h2 {
   border: 2px solid black;
-  width: 10em;
+  width: 6em;
   text-align: center;
-  float: right;
-  margin-top: -2px;
-  margin-right: -2px;
+  position: absolute;
+  right: -2px;
+  top: -2px;
 }
 
 h2.name1 {
@@ -37,7 +45,53 @@ h2.name3 {
 }
 
 p {
-  clear: both;
   margin-left: 0.5em;
-  height: 6em;
+  margin-right: 0.5em;
+  line-height: 1.1em;
+  height: 6.5em;
+  margin-top: 2em;  
+}
+
+/********** Medium devices **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .sec1, .sec2 {
+    float: left;
+    width: 50%;
+  }
+  
+  .sec3 {
+    width: 100%;
+    clear: both;
+  }
+  
+  .sec1 {
+    padding-right: 6px;
+  }
+  
+  .sec2 {
+    padding-left: 6px;
+  }
+
+}
+
+/********** Large devices  **********/
+@media (min-width: 992px) {
+ section {
+    float: left;
+    width: 33.33%;
+  }
+
+.sec1 {
+    padding-right: 6px;
+  }
+
+  .sec2 {
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+  
+  .sec3{
+    padding-left: 6px;
+  }  
+
 }
